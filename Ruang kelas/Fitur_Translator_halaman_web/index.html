@@ -1,0 +1,99 @@
+<!doctype html>
+<html amp lang="en">
+  <!-- bagian head adalah mengatur AMP untuk mobile user, saya mengcopy dari internet AMP -->
+  <head>
+    <meta charset="utf-8">
+    <title>Translator</title>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-light bg-dark shadow "> 
+      <a class="navbar-brand text-light py-0" href="#">&nbsp;&nbsp;&nbsp;<b>Translator </b> halaman web</a>
+      <img src="..." class="rounded-1 float-end " alt="...">
+    </nav>
+
+</br>
+<!-- <h2><center></font></center></h2> -->
+</br>
+
+<center> 
+  <form>
+    <div class="mb-3">
+      <input placeholder="                tempel URL disini" type="text" id="nama" aria-describedby="emailHelp"
+      style=" position: relative; top :20px; left :5px; width: 270px;;">
+    </div>
+  
+    <button type="button" class="btn btn-primary" style=" position: relative; top :20px; left :5px;" onclick="cetak1(); cetak2(); switchtoggle()">Cetak</button>
+  </form>
+
+  <div class="form-check form-switch" ><br>
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="switchtoggle()">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Buka di tab baru</label>
+  </div>
+  
+
+<br>
+<div style="font-weight: bold; padding: 15px; background: rgb(216, 216, 216); background-clip: padding-box;">
+<p id="menampilkan teks Indonesia"></p><p id="menampilkan teks Inggris"></p>
+</div>
+<!-- diberikan 2 tempat paragraf, dengan id yang berbeda agar tidak tumpang tindih -->
+
+<script>
+    function cetak1() {
+        var nama = document.getElementById("nama").value ;
+        document.getElementById("menampilkan teks Indonesia").innerHTML = 
+        "<a href='https://translate.google.com/translate?hl=id&sl=en&u=" + nama +"&prev=search&pto=aue' target='_blank'>Bahasa Indonesia</a>"; 
+        ///kutip didalam kutip kita gunakan " dan ' dimana kutip doubel lebih atas
+        ///target='_blank' berfungsi untuk membuka jendela baru saat klik
+    }
+    function cetak2() {
+        var nama = document.getElementById("nama").value ;
+        document.getElementById("menampilkan teks Inggris").innerHTML = 
+        "<a href='https://translate.google.com/translate?hl=en&sl=id&u=" + nama +"&prev=search&pto=aue' target='_blank'>Bahasa Inggris</a>"; 
+    }
+    function switchtoggle() {
+        // Get the checkbox
+        var checkBox = document.getElementById("flexSwitchCheckDefault");
+        // Get the output text
+        var text = document.getElementById("text");
+
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true){
+          var nama = document.getElementById("nama").value ;
+          document.getElementById("menampilkan teks Indonesia").innerHTML = 
+          "<a href='https://translate.google.com/translate?hl=id&sl=en&u=" + nama +"&prev=search&pto=aue' target='_blank'>Bahasa Indonesia</a>"; 
+
+          text.style.display = "none";
+          var nama = document.getElementById("nama").value ;
+          document.getElementById("menampilkan teks Inggris").innerHTML = 
+          "<a href='https://translate.google.com/translate?hl=en&sl=id&u=" + nama +"&prev=search&pto=aue' target='_blank'>Bahasa Inggris</a>"; 
+        } else {
+          var nama = document.getElementById("nama").value ;
+          document.getElementById("menampilkan teks Indonesia").innerHTML = 
+          "<a href='https://translate.google.com/translate?hl=id&sl=en&u=" + nama +"&prev=search&pto=aue' >Bahasa Indonesia</a>"; 
+
+          text.style.display = "none";
+          var nama = document.getElementById("nama").value ;
+          document.getElementById("menampilkan teks Inggris").innerHTML = 
+          "<a href='https://translate.google.com/translate?hl=en&sl=id&u=" + nama +"&prev=search&pto=aue' >Bahasa Inggris</a>"; 
+  }
+  }
+    
+
+</script>
+</center>
+    
+
+
+
+
+
+  </body>
+</html>
+
+<!-- Identifikasi halaman ini
+<font face="Century Gothic"> -->
